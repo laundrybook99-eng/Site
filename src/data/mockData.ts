@@ -63,7 +63,7 @@ export const stores: Store[] = [
     address: 'Maktha Masjid, HMT Colony, Miyapur',
     city: 'Hyderabad',
     state: 'Telangana',
-    hours: 'Mon-Sun: 8AM-9PM',
+    hours: '9AM-8PM Wednesday holiday',
     services: ['Wash & Fold', 'Steam Iron', 'Wash & Iron', 'Dry Wash'],
     lat: 17.4969,
     lng: 78.3821
@@ -75,7 +75,7 @@ export const franchiseModels: FranchiseModel[] = [
     id: '1',
     name: 'Pick-up point',
     investment: '₹2.5 +GST',
-    space: '500-800 sq ft',
+    space: '180-250 sq ft',
     description: 'Full-service pick-up point with complete laundry facilities'
   },
   {

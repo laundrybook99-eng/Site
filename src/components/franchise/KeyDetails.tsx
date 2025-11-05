@@ -5,7 +5,7 @@ export default function KeyDetails() {
     {
       icon: DollarSign,
       label: 'Investment Range',
-      value: '₹8-35 Lakhs'
+      value: '₹2.5-18 Lakhs'
     },
     {
       icon: Building2,
@@ -20,7 +20,7 @@ export default function KeyDetails() {
     {
       icon: Users,
       label: 'Franchise Fee',
-      value: '₹2-5 Lakhs'
+      value: '₹0 Lakhs'
     }
   ];
 

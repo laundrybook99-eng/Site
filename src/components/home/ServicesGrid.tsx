@@ -1,11 +1,10 @@
-import { Package, Flame, Sparkles, Droplet } from 'lucide-react';
 import { services } from '../../data/mockData';
 
-const iconMap: { [key: string]: typeof Package } = {
-  package: Package,
-  flame: Flame,
-  sparkles: Sparkles,
-  droplet: Droplet
+const imageMap: { [key: string]: string } = {
+  package: '/wf.jpg',
+  flame: '/si.jpg',
+  sparkles: '/wi.jpg',
+  droplet: '/dw.jpg'
 };
 
 export default function ServicesGrid() {
@@ -22,15 +21,17 @@ export default function ServicesGrid() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map(service => {
-            const Icon = iconMap[service.icon];
-            return (
+          {services.map(service => (
               <div
                 key={service.id}
                 className="bg-[#0D223A] rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group border border-[#D1B46A]/20"
               >
                 <div className="aspect-video bg-gradient-to-br from-[#D1B46A]/10 to-[#E3C87D]/10 flex items-center justify-center group-hover:from-[#D1B46A]/20 group-hover:to-[#E3C87D]/20 transition-colors">
-                                    <Icon className="h-16 w-16 text-[#D1B46A]" />
+                  <img 
+                    src={imageMap[service.icon]} 
+                    alt={service.name}
+                    className="h-72 w-72 object-cover"
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-[#D1B46A] mb-2">
@@ -47,8 +48,7 @@ export default function ServicesGrid() {
                   </div>
                 </div>
               </div>
-            );
-          })}
+          ))}
         </div>
       </div>
     </section>

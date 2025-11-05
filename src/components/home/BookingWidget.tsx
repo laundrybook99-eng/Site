@@ -63,6 +63,30 @@ export default function BookingWidget() {
     phoneNumber.length === 10 &&
     name.trim() !== '';
 
+  const handleSchedule = () => {
+    if (!canSchedule) return;
+
+    const waPhone = '919908689969';
+
+    const selectedServicesList = Object.entries(selectedServices).map(([id, qty]) => {
+      const s = services.find(x => x.id === id);
+      return s ? `${s.name} x${qty} (${s.unit})` : `${id} x${qty}`;
+    });
+
+    const selectedDryList = Object.entries(selectedDryWashItems).map(([id, qty]) => {
+      const i = dryWashItems.find(x => x.id === id);
+      return i ? `${i.name} x${qty}` : `${id} x${qty}`;
+    });
+
+    const storeName = stores.find(s => s.id === selectedStore)?.name || 'N/A';
+    const total = calculateTotal();
+
+    const message = `Hello, I'd like to schedule a pickup.\n\nName: ${name}\nPhone: ${phoneNumber}\nPickup Day: ${pickupDay}\nTime Slot: ${selectedTimeSlot}\nStore: ${storeName}\nPickup Location: ${address}\n\nServices:\n${[...selectedServicesList, ...selectedDryList].join('\n') || 'None'}\n\nTotal: ₹${total}`;
+
+    const waUrl = `https://wa.me/${waPhone}?text=${encodeURIComponent(message)}`;
+    window.open(waUrl, '_blank');
+  };
+
   return (
     <section id="booking-widget" className="py-16 bg-[#0D223A] text-[#D1B46A]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -297,6 +321,7 @@ export default function BookingWidget() {
 
           {/* Schedule Button */}
           <button
+            onClick={handleSchedule}
             disabled={!canSchedule}
             className={`w-full py-4 rounded-lg font-semibold text-lg transition-colors ${
               canSchedule

@@ -51,7 +51,15 @@ export default function FranchiseModels() {
                     <span className="text-[#A8B3C5]">Marketing Materials</span>
                   </div>
                 </div>
-                <button className="w-full py-3 bg-[#D1B46A] text-[#0D223A] rounded-lg font-medium hover:bg-[#E3C87D] transition-colors">
+                <button
+                  onClick={() => {
+                    const el = document.getElementById('franchise-contact');
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}
+                  className="w-full py-3 bg-[#D1B46A] text-[#0D223A] rounded-lg font-medium hover:bg-[#E3C87D] transition-colors"
+                >
                   Apply Now
                 </button>
               </div>

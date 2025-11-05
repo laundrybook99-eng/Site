@@ -14,7 +14,16 @@ export default function FranchiseContact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setShowModal(true);
+
+    // Build the WhatsApp message using the form data
+    const phone = '919908689969';
+    const message = `Hello, I would like to apply for a franchise.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nCity: ${formData.city}\nPreferred Model: ${formData.model}\nMessage: ${formData.message}`;
+    const waUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp in a new tab/window
+    window.open(waUrl, '_blank');
+
+    // Reset the form
     setFormData({
       name: '',
       phone: '',
@@ -26,7 +35,7 @@ export default function FranchiseContact() {
   };
 
   return (
-    <section className="py-16 bg-[#162B47]">
+  <section id="franchise-contact" className="py-16 bg-[#162B47]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#D1B46A] mb-4">

@@ -12,9 +12,9 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      <TrustFeatures />
       <ServicesGrid />
       <BookingWidget />
+      <TrustFeatures />
       <HowItWorks />
       <section className="py-16 bg-[#0D223A]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

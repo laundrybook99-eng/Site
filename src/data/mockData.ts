@@ -73,22 +73,22 @@ export const stores: Store[] = [
 export const franchiseModels: FranchiseModel[] = [
   {
     id: '1',
-    name: 'Retail Outlet',
-    investment: '₹15-20 Lakhs',
+    name: 'Pick-up point',
+    investment: '₹2.5 +GST',
     space: '500-800 sq ft',
-    description: 'Full-service retail outlet with complete laundry facilities'
+    description: 'Full-service pick-up point with complete laundry facilities'
   },
   {
     id: '2',
-    name: 'Micro/Hub',
-    investment: '₹8-12 Lakhs',
+    name: 'Mini/Hub',
+    investment: '₹5.5 +GST',
     space: '300-500 sq ft',
     description: 'Compact hub for collection and delivery operations'
   },
   {
     id: '3',
     name: 'Full Studio',
-    investment: '₹25-35 Lakhs',
+    investment: '₹15 +GST',
     space: '1000-1500 sq ft',
     description: 'Premium studio with advanced equipment and multiple service lines'
   }
@@ -122,7 +122,7 @@ export const homeFAQs: FAQ[] = [
   {
     id: '1',
     question: 'What are your service rates?',
-    answer: 'Our rates vary by service type. Wash & Fold starts at ₹40/kg, Steam Iron at ₹15/piece, Wash & Iron at ₹50/kg, and Dry Wash at ₹80/piece.'
+    answer: 'Our rates vary by service type. Wash & Fold starts at ₹88/kg, Steam Iron at ₹98/kg, Wash & Iron at ₹118/kg, and Dry Wash at ₹80/piece.'
   },
   {
     id: '2',

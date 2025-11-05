@@ -60,11 +60,11 @@ export default function Footer({ onNavigate }: FooterProps) {
             <ul className="space-y-2 text-sm">
               <li className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
-                <span>support@laundrybook.com</span>
+                <span>Laundrybook99@gmail.com</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-4 w-4 mr-2" />
-                <span>+91 98765 43210</span>
+                <span>+91 99086 89969</span>
               </li>
             </ul>
           </div>

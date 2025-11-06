@@ -8,7 +8,7 @@ export const dryWashItems: DryWashItem[] = [
   { id: 'dw5', name: 'Kurta', price: 148 },
   { id: 'dw6', name: 'Pyjama', price: 80 },
   { id: 'dw7', name: 'T-shirt', price: 80 },
-  { id: 'dw8', name: 'Hoodie', price: 78 },
+  { id: 'dw8', name: 'Hoodie', price: 148 },
   { id: 'dw9', name: 'Waist Coat', price: 148 },
   { id: 'dw10', name: 'Pancha', price: 148 },
   { id: 'dw11', name: 'Kanduva', price: 80 },

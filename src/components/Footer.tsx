@@ -73,21 +73,21 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h3 className="text-white font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/share/1CSNyCUg8s/"
                 className="hover:text-teal-400 transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://x.com/l_book5758?t=o2-zDIYT_VWrI6iQtIL-Ug&s=09"
                 className="hover:text-teal-400 transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/laundrybook9?igsh=MWJvZnUxeWZrZjVrNw=="
                 className="hover:text-teal-400 transition-colors"
                 aria-label="Instagram"
               >
@@ -98,7 +98,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-sm">
-          <p>© 2024 - 2025 Laundry Book. All rights reserved.</p>
+          <p>© 2024 - 2025 Laundry Book. All rights reserved.Made with <a href="https://staffarc.in" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">staffarc</p>
         </div>
       </div>
     </footer>

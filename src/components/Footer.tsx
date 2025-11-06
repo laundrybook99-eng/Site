@@ -9,6 +9,7 @@ export default function Footer({ onNavigate }: FooterProps) {
     <footer className="bg-[#0D223A] text-[#A8B3C5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          {/* Logo and description */}
           <div>
             <div className="flex items-center mb-4">
               <img
@@ -25,6 +26,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             </p>
           </div>
 
+          {/* Quick Links */}
           <div>
             <h3 className="text-[#D1B46A] font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
@@ -55,6 +57,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             </ul>
           </div>
 
+          {/* Contact Info */}
           <div>
             <h3 className="text-white font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm">
@@ -69,6 +72,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             </ul>
           </div>
 
+          {/* Social Links */}
           <div>
             <h3 className="text-white font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
@@ -76,6 +80,8 @@ export default function Footer({ onNavigate }: FooterProps) {
                 href="https://www.facebook.com/share/1CSNyCUg8s/"
                 className="hover:text-teal-400 transition-colors"
                 aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Facebook className="h-5 w-5" />
               </a>
@@ -83,6 +89,8 @@ export default function Footer({ onNavigate }: FooterProps) {
                 href="https://x.com/l_book5758?t=o2-zDIYT_VWrI6iQtIL-Ug&s=09"
                 className="hover:text-teal-400 transition-colors"
                 aria-label="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Twitter className="h-5 w-5" />
               </a>
@@ -90,6 +98,8 @@ export default function Footer({ onNavigate }: FooterProps) {
                 href="https://www.instagram.com/laundrybook9?igsh=MWJvZnUxeWZrZjVrNw=="
                 className="hover:text-teal-400 transition-colors"
                 aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -97,8 +107,19 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
         </div>
 
+        {/* Footer Bottom */}
         <div className="border-t border-gray-800 pt-8 text-center text-sm">
-          <p>© 2024 - 2025 Laundry Book. All rights reserved.Made with <a href="https://staffarc.in" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">staffarc</p>
+          <p>
+            © 2024 - 2025 Laundry Book. All rights reserved. Made with{' '}
+            <a
+              href="https://staffarc.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              staffarc
+            </a>
+          </p>
         </div>
       </div>
     </footer>

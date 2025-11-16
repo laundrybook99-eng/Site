@@ -59,7 +59,6 @@ export default function BookingWidget() {
   const canSchedule =
     selectedStore !== '' &&
     selectedTimeSlot !== '' &&
-    address !== '' &&
     phoneNumber.length === 10 &&
     name.trim() !== '';
 
@@ -277,14 +276,15 @@ export default function BookingWidget() {
             </p>
           </div>
 
-          {/* Address */}
+          
+          {/* Name */}
           <div className="mb-6">
-            <label className="block text-sm font-semibold mb-3">Pickup Location</label>
+            <label className="block text-sm font-semibold mb-3">Your Name</label>
             <input
               type="text"
-              value={address}
-              onChange={e => setAddress(e.target.value)}
-              placeholder="Paste your pick-up location link"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              placeholder="Enter your full name"
               className="w-full px-4 py-3 border border-[#D1B46A]/30 rounded-lg bg-[#0D223A] text-[#D1B46A] placeholder-[#A8B3C5] focus:ring-2 focus:ring-[#D1B46A]"
             />
           </div>
@@ -307,17 +307,18 @@ export default function BookingWidget() {
             )}
           </div>
 
-          {/* Name */}
+          {/* Address */}
           <div className="mb-6">
-            <label className="block text-sm font-semibold mb-3">Your Name</label>
+            <label className="block text-sm font-semibold mb-3">Pickup Location</label>
             <input
               type="text"
-              value={name}
-              onChange={e => setName(e.target.value)}
-              placeholder="Enter your full name"
+              value={address}
+              onChange={e => setAddress(e.target.value)}
+              placeholder="Address(optional)"
               className="w-full px-4 py-3 border border-[#D1B46A]/30 rounded-lg bg-[#0D223A] text-[#D1B46A] placeholder-[#A8B3C5] focus:ring-2 focus:ring-[#D1B46A]"
             />
           </div>
+
 
           {/* Schedule Button */}
           <button
